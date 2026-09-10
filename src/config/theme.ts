@@ -2,20 +2,20 @@ import type { Theme } from '../types';
 
 export const theme = {
   colours: {
-    background: '#0757C8',
-    surface: '#0A63D8',
-    text: '#F7FBFF',
-    muted: '#C9E1FF',
-    border: '#b4b1b1',
+    background: '#0B0C10',
+    surface: '#191B23',
+    text: '#FFFFFF',
+    muted: '#BFC1CF',
+    border: '#414452',
 
-    primary: '#F7FBFF',
-    onPrimary: '#fffdfd',
+    primary: '#EAFF5D',
+    onPrimary: '#12130C',
 
-    accent: '#58E7FF',
-    onAccent: '#003B7A',
+    accent: '#EAFF5D',
+    onAccent: '#12130C',
 
-    feature: '#0347A8',
-    onFeature: '#F7FBFF',
+    feature: '#7321DE',
+    onFeature: '#FFFFFF',
   },
 
   fonts: {

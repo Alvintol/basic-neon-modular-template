@@ -107,10 +107,10 @@ textarea:focus-visible {
   background:
     radial-gradient(
       circle at 50% 18%,
-      rgba(70, 220, 255, 0.22),
-      transparent 30rem
+      rgba(115, 33, 222, 0.3),
+      transparent 32rem
     ),
-    linear-gradient(180deg, #0757c8 0%, #0757c8 55%, #064eb5 100%);
+    linear-gradient(180deg, #0b0c10 0%, #0b0c10 55%, #101019 100%);
   color: var(--text);
   font-family: var(--font-body);
 }
@@ -233,11 +233,11 @@ textarea:focus-visible {
   border: 1px solid rgba(255, 255, 255, 0.28);
   border-radius: 999px;
 
-  background: rgba(4, 65, 160, 0.72);
+  background: rgba(25, 27, 35, 0.82);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
 
-  box-shadow: 0 10px 30px rgba(0, 25, 90, 0.18);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
 }
 
 .navigation a {
@@ -293,7 +293,7 @@ textarea:focus-visible {
 }
 
 .header-action .button {
-  background: rgba(0, 45, 115, 0.65);
+  background: rgba(25, 27, 35, 0.82);
   color: white;
 
   border-color: rgba(255, 255, 255, 0.65);
@@ -420,7 +420,7 @@ textarea:focus-visible {
   gap: 1rem;
 }
 .service-card {
-  background: rgba(4, 67, 158, 0.45);
+  background: rgba(25, 27, 35, 0.72);
 
   border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 1rem;
@@ -746,7 +746,7 @@ form .button {
   aspect-ratio: var(--photo-ratio);
 }
 .showcase-spotlight .photo-card {
-  background: rgba(4, 67, 158, 0.5);
+  background: rgba(25, 27, 35, 0.78);
   border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
