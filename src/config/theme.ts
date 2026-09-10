@@ -6,10 +6,10 @@ export const theme = {
     surface: '#0A63D8',
     text: '#F7FBFF',
     muted: '#C9E1FF',
-    border: '#ffffff2e',
+    border: '#b4b1b1',
 
     primary: '#F7FBFF',
-    onPrimary: '#0757C8',
+    onPrimary: '#fffdfd',
 
     accent: '#58E7FF',
     onAccent: '#003B7A',
