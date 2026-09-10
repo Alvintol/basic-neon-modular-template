@@ -67,12 +67,6 @@
   padding: 1.5rem;
   border-radius: var(--radius);
 }
-.module-number {
-  display: block;
-  color: var(--accent);
-  font-size: 0.875rem;
-  margin-bottom: 1.2rem;
-}
 .site .modular-hero .hero-highlights h2 {
   font-family: var(--font-body);
   font-size: 1.15rem;
@@ -103,10 +97,6 @@
   border: 1px solid var(--border);
   border-radius: var(--radius);
   background: var(--surface);
-}
-.site .step-number {
-  display: block;
-  margin-bottom: 1.8rem;
 }
 .site .process-list h3 {
   font-family: var(--font-body);
