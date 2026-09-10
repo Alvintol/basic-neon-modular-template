@@ -420,6 +420,11 @@ textarea:focus-visible {
   gap: 1rem;
 }
 .service-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  min-width: 0;
+  padding: 1.7rem;
   background: rgba(25, 27, 35, 0.72);
 
   border: 1px solid rgba(255, 255, 255, 0.14);
@@ -427,10 +432,8 @@ textarea:focus-visible {
 
   backdrop-filter: blur(10px);
 }
-
-.item-number {
-  font-size: 0.875rem;
-  color: var(--accent);
+.service-body {
+  min-width: 0;
 }
 .service-body > p {
   color: var(--muted);
@@ -512,11 +515,6 @@ textarea:focus-visible {
 .process-list li:first-child {
   padding-top: 0;
   border-top: 0;
-}
-.step-number {
-  color: var(--accent);
-  font-size: 0.94rem;
-  min-width: 2rem;
 }
 .process-list p {
   margin-top: 0.65rem;
