@@ -6,7 +6,7 @@ export const theme = {
     surface: '#0A63D8',
     text: '#F7FBFF',
     muted: '#C9E1FF',
-    border: 'rgba(255,255,255,.18)',
+    border: '#ffffff2e',
 
     primary: '#F7FBFF',
     onPrimary: '#0757C8',
