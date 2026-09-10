@@ -15,6 +15,11 @@ try {
   const newTheme = structuredClone(theme);
   newTheme.colours.primary = '#123456';
   validateConfig(changed, newTheme);
+  newTheme.colours.border = 'rgba(255,255,255,.18)';
+  validateConfig(changed, newTheme);
+  newTheme.colours.border = 'rgba(300,255,255,.18)';
+  assert.throws(() => validateConfig(changed, newTheme), /six- or eight-digit hex, rgb, or rgba/);
+  newTheme.colours.border = theme.colours.border;
   const html = render(changed, newTheme);
   assert(html.includes('Replacement Client'));
   assert(!html.includes('demo-banner'));
