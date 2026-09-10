@@ -1,28 +1,32 @@
 import type { Theme } from '../types';
 
-// Set brand colours, fonts, corner shapes and maximum page width here.
 export const theme = {
-  "colours": {
-    "background": "#0b0c10",
-    "surface": "#191b23",
-    "text": "#ffffff",
-    "muted": "#bfc1cf",
-    "border": "#414452",
-    "primary": "#eaff5d",
-    "onPrimary": "#12130c",
-    "accent": "#eaff5d",
-    "onAccent": "#12130c",
-    "feature": "#7321de",
-    "onFeature": "#ffffff"
+  colours: {
+    background: '#0757C8',
+    surface: '#0A63D8',
+    text: '#F7FBFF',
+    muted: '#C9E1FF',
+    border: 'rgba(255,255,255,.18)',
+
+    primary: '#F7FBFF',
+    onPrimary: '#0757C8',
+
+    accent: '#58E7FF',
+    onAccent: '#003B7A',
+
+    feature: '#0347A8',
+    onFeature: '#F7FBFF',
   },
-  "fonts": {
-    "body": "Arial, sans-serif",
-    "heading": "\"Arial Black\", Arial, sans-serif",
-    "accent": "Georgia, serif"
+
+  fonts: {
+    body: 'Arial, Helvetica, sans-serif',
+    heading: '"Bodoni Moda", "Didot", "Bodoni 72", Georgia, serif',
+    accent: '"Bodoni Moda", "Didot", "Bodoni 72", Georgia, serif',
   },
-  "shape": {
-    "radius": "1rem",
-    "buttonRadius": "4rem",
-    "contentWidth": "78rem"
-  }
+
+  shape: {
+    radius: '1.25rem',
+    buttonRadius: '4rem',
+    contentWidth: '82rem',
+  },
 } satisfies Theme;

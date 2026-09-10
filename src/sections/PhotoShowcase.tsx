@@ -44,8 +44,10 @@ export const PhotoShowcase = ({ section }: { section: ShowcaseSection }) => {
     const cards = Array.from(node.children) as HTMLElement[];
     const target = cards[Math.max(0, Math.min(index, cards.length - 1))];
     if (!target) return;
-    node.scrollTo({ left: target.offsetLeft - cards[0].offsetLeft,
-      behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+    node.scrollTo({
+      left: target.offsetLeft - cards[0].offsetLeft,
+      behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'
+    });
   };
   const keyboard = (event: KeyboardEvent<HTMLDivElement>) => {
     if (event.target !== event.currentTarget) return;
@@ -67,9 +69,9 @@ export const PhotoShowcase = ({ section }: { section: ShowcaseSection }) => {
     {!grid && <p className="carousel-hint" id={`${section.id}-hint`}>{section.labels.instructions}</p>}
     <div ref={track} id={`${section.id}-track`} className="photo-track" tabIndex={grid ? undefined : 0}
       aria-label={section.title} aria-describedby={grid ? undefined : `${section.id}-hint`} onKeyDown={grid ? undefined : keyboard}>
-      {section.items.map((item, index) => <figure className="photo-card" key={item.id}>
-        <div className="photo-frame"><Photo image={item.image} />{grid && <span className="photo-index" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>}</div>
+      {section.items.map((item) => <figure className="photo-card" key={item.id}>
         <Caption item={item} />
+        <div className="photo-frame"><Photo image={item.image} /></div>
       </figure>)}
     </div>
     {spotlight && section.items.length > 1 && <div className="spotlight-pagination">
