@@ -1,0 +1,38 @@
+.site { border: .65rem solid var(--accent); }
+.site .brand { letter-spacing: -.02em; }
+.site .brand-mark { font-size: 1.8rem; }
+.site .modular-hero { padding-top: 1.5rem; }
+.modular-feature { display: grid; grid-template-columns: 1.05fr .95fr; gap: 3rem; background: var(--feature); color: var(--on-feature); border-radius: var(--radius); padding: 3rem; }
+.modular-feature.without-image { grid-template-columns: 1fr; }
+.site .modular-feature h1 { font-size: clamp(4rem, 8.6vw, 8rem); line-height: .96; font-weight: 900; letter-spacing: -.06em; }
+.site .modular-feature .hero-description { color: var(--on-feature); max-width: 26rem; }
+.site .modular-feature .hero-photo { align-self: center; background: var(--background); border: 1px solid var(--border); transform: rotate(2deg); border-radius: .35rem; }
+.site .modular-feature .hero-photo img { height: 26rem; }
+.site .modular-feature figcaption { padding: 1.5rem; }
+.site .modular-feature figcaption span { display: block; color: var(--muted); font-size: .875rem; margin-bottom: .5rem; }
+.site .modular-feature figcaption strong { color: var(--accent); font-size: 1.2rem; line-height: 1.4; }
+.site .modular-hero .hero-highlights { padding: 0; border: 0; margin-top: 1rem; }
+.site .modular-hero .hero-highlights div { background: var(--surface); border: 1px solid var(--border); padding: 1.5rem; border-radius: var(--radius); }
+.module-number { display: block; color: var(--accent); font-size: .875rem; margin-bottom: 1.2rem; }
+.site .modular-hero .hero-highlights h2 { font-family: var(--font-body); font-size: 1.15rem; }
+.site .section-intro h2 { font-weight: 800; text-transform: uppercase; max-width: 44rem; font-size: clamp(2rem, 3.7vw, 3.4rem); }
+.site .service-card { background: transparent; }
+.site .process { display: block; }
+.site .process .section-intro { max-width: 48rem; }
+.site .process-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.site .process-list li { display: block; padding: 1.5rem; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); }
+.site .step-number { display: block; margin-bottom: 1.8rem; }
+.site .process-list h3 { font-family: var(--font-body); }
+.site .contact h2 { color: var(--accent); }
+@media (max-width: 1000px) {
+  .modular-feature { padding: 2rem; gap: 2rem; }
+  .site .modular-feature .hero-photo img { height: 22rem; }
+}
+@media (max-width: 760px) {
+  .site { border-width: .35rem; }
+  .modular-feature { grid-template-columns: 1fr; padding: 1.4rem; gap: 2rem; }
+  .site .modular-feature h1 { font-size: clamp(3.5rem, 14vw, 6rem); }
+  .site .modular-feature .hero-photo { transform: none; }
+  .site .modular-feature .hero-photo img { height: 22rem; }
+  .site .process-list { grid-template-columns: 1fr; }
+}
