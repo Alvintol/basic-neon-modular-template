@@ -6,8 +6,7 @@ export const Services = ({ section }: { section: ServicesSection }) => (
   <section className="section services container" id={section.id} aria-labelledby={`${section.id}-title`}>
     <SectionIntro section={section} />
     <div className="services-grid">
-      {section.items.map((item, index) => <article className="service-card" key={item.id}>
-        <span className="item-number" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
+      {section.items.map((item) => <article className="service-card" key={item.id}>
         <div className="service-body"><h3>{item.title}</h3>
           {item.subtitle && <p className="service-subtitle">{item.subtitle}</p>}
           <p>{item.description}</p>
