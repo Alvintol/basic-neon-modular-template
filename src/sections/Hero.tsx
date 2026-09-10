@@ -15,8 +15,8 @@ export const Hero = ({ hero }: { hero: ClientConfig['hero'] }) => (
         <figcaption>{hero.locationLabel && <span>{hero.locationLabel}</span>}{hero.imageCaption && <strong>{hero.imageCaption}</strong>}</figcaption>
       </figure>}
     </div>
-    <div className="hero-highlights">{hero.highlights.map((item, index) => <div key={item.title}>
-      <span className="module-number" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span><h2>{item.title}</h2><p>{item.description}</p>
+    <div className="hero-highlights">{hero.highlights.map((item) => <div key={item.title}>
+      <h2>{item.title}</h2><p>{item.description}</p>
     </div>)}</div>
   </section>
 );
