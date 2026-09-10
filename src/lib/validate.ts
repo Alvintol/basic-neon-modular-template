@@ -1,5 +1,26 @@
 import type { ClientConfig, Theme } from '../types';
 
+const isThemeColour = (colour: string) => {
+  if (/^#[0-9a-f]{6}(?:[0-9a-f]{2})?$/i.test(colour)) return true;
+
+  const functionalColour = colour.match(/^(rgb|rgba)\((.+)\)$/i);
+  if (!functionalColour) return false;
+
+  const values = functionalColour[2].split(',').map((value) => value.trim());
+  const expectedValues = functionalColour[1].toLowerCase() === 'rgba' ? 4 : 3;
+  if (values.length !== expectedValues) return false;
+
+  const channels = values.slice(0, 3).map(Number);
+  if (channels.some((value) => !Number.isInteger(value) || value < 0 || value > 255)) return false;
+
+  if (values.length === 4) {
+    const alpha = Number(values[3]);
+    if (!Number.isFinite(alpha) || alpha < 0 || alpha > 1) return false;
+  }
+
+  return true;
+};
+
 export const validateConfig = (client: ClientConfig, theme: Theme) => {
   const errors: string[] = [];
   const ids = new Set(['top', 'main']);
@@ -33,7 +54,7 @@ export const validateConfig = (client: ClientConfig, theme: Theme) => {
   if (client.demo.enabled && client.seo.indexable) errors.push('Keep fictional demo sites noindex.');
   if (client.seo.url && !/^https:\/\//.test(client.seo.url)) errors.push('SEO URL must use HTTPS.');
   for (const [name, colour] of Object.entries(theme.colours)) {
-    if (!/^#[0-9a-f]{6}$/i.test(colour)) errors.push(`Theme colour ${name} must be a six-digit hex colour.`);
+    if (!isThemeColour(colour)) errors.push(`Theme colour ${name} must be a six- or eight-digit hex, rgb, or rgba colour.`);
   }
   if (errors.length) throw new Error(`Configuration needs attention:\n${errors.map((error) => `- ${error}`).join('\n')}`);
 };
